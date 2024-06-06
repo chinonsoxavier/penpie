@@ -1,0 +1,120 @@
+/* @config '../tailwind.config.ts' */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+div {
+  box-sizing: border-box;
+  -webkit-box-reflect: border-box;
+  -moz-box-sizing: border-box;
+}
+
+
+@media (max-width: 998px) {
+  .max-width {
+    max-width: 78rem;
+    padding: 0 20px;
+    width: 100%;
+  }
+}
+
+/* @media (min-width: 768px) { */
+@media (min-width: 998px) {
+  .max-width {
+    padding: 0 60px;
+    max-width: 78rem;
+    width: 100%;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MainCategories:hover {
+  background-size: 800px;
+  background-repeat: no-repeat;
+}
+
+@keyframes freeDelivery_Smoke {
+  0% {
+    transform: translateX(-10px)
+  }
+
+  100% {
+    transform: translateX(10px)
+  }
+}
+
+.freeDelivery_Smoke {
+  /* animation-duration: 3s; */
+  animation: freeDelivery_Smoke 2s ease-in-out infinite;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  /* animation-iteration-count: infinite forward; */
+}
+
+@keyframes collectionsAnimationShow {
+  100%{
+    display: flex;
+  }
+}
+@keyframes collectionsAnimationScaleUp {
+  100%{
+    transform:scale(100%);
+    display: flex;
+  }
+}
+
+.collectionsAnimationShow{
+  animation: collectionsAnimationShow 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+.collectionsAnimationScaleUp{
+  animation: collectionsAnimationScaleUp 1s ease-in-out;
+  animation-fill-mode: forwards;
+    animation-duration: .7s;
+}
+@keyframes collectionsAnimationHide {
+  100%{
+    display: none;
+  }
+}
+@keyframes collectionsAnimationScaleDown {
+  100%{
+    transform:scale(0);
+    display: none;
+  }
+}
+
+.collectionsAnimationHide{
+  animation: collectionsAnimationHide 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: .5s;
+    animation-duration: .7ss;
+}
+.collectionsAnimationScaleDown{
+  animation: collectionsAnimationScaleDown 1s ease-in-out;
+  animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
