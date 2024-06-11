@@ -1,17 +1,9 @@
-"use client";
 import { Categories as CategoriesData } from '@/interface/exports';
 import ButtonWidget from '@/app/widgets/ButtonWidget';
 import Image from 'next/image';
 import { ShapeOnHover01, ShapeOnHover02, categoriesBg } from '@/constants/exports';
-import { useState } from 'react';
 
 const Categories = () => {
-    const [hovered,setHovered]=useState(null)
-
-    const handleHover = (index:any)=>{
-       setHovered(hovered === index ? null : index);
-    }
-
   return (
     <div className="wrapper">
       <div className="max-width center gap-5 flex-wrap">
@@ -43,9 +35,8 @@ const Categories = () => {
                 }
                 accent="secondary"
                 border="#fcb302"
-                className='bg-secondary text-white fill-white border-2 border-primary  before:bg-primary'
+                className="bg-secondary text-white fill-white border-2 border-primary  before:bg-primary"
               />
-            
             </div>
             <div
               style={{
@@ -54,17 +45,11 @@ const Categories = () => {
                 backgroundSize: "contain",
                 backgroundPositionY: "80px",
               }}
-              className="center -mt-[60px] relative bg[blue]  "
-              //   onMouseOver={()=>handleHover(index)}
-              //   onMouseOut={()=>handleHover(index)}
-              onMouseEnter={() => handleHover(index)}
-              onMouseLeave={() => handleHover(index)}
+              className="center -mt-[60px] relative group  "
             >
               <Image
                 src={ShapeOnHover01}
-                className={`object-contain w-fll hfull absolute -top-8 left-8 duration-700 ${
-                  hovered === index ? "scale-[100%]" : "scale-0"
-                }`}
+                className={`object-contain group-hover:scale-[100%] scale-0 absolute -top-8 left-8 duration-700 `}
                 alt="Shape on hover"
               />
               <Image
@@ -72,12 +57,10 @@ const Categories = () => {
                 alt=""
                 src={category.image}
               />
-              
+
               <Image
                 src={ShapeOnHover02}
-                className={`object-contain w-fll -full absolute -top-8 right-8 duration-700 ${
-                  hovered === index ? "scale-[100%]" : "scale-0"
-                } `}
+                className={`object-contain w-fll -full absolute -top-8 right-8 duration-700 group-hover:scale-[100%] scale-0 `}
                 alt="Shape on hover"
               />
             </div>

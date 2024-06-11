@@ -32,6 +32,10 @@ const config: Config = {
       xl: "1200px",
       xl2: "1536px",
     },
+    backgroundSize:{
+      "100":"100%",
+      "120":"120%"
+    }
   },
   plugins: [],
 };

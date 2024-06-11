@@ -10,7 +10,7 @@ const AboutUs = () => {
      
     >
       <div className="center max-width flex-wrap gap-5">
-        <div className="flex-1 center max-lg max-w-lg  min-w-[410px] mobile:min-w-[100%]">
+        <div className="flex-1 center max-lg max-w-lg  min-w-[320px] mobile:min-w-[100%]">
           <Image
             src={AboutUsImage}
             alt="about us"

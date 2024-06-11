@@ -74,7 +74,7 @@ const ClientsReviews = () => {
   return (
     <div className="wrapper">
       <div className="max-width flex items-center justify-between gap-8 flex-wrap ">
-        <div className="flex-1 max-w-[580px] center min-w-[410px] mobile:min-w-[100%] relative">
+        <div className="flex-1 max-w-[580px] center min-w-[320px] mobile:min-w-[100%] relative">
           <div className="absolute max-w-[32%] w-full  t-0 z-0 translate-x-[110%] translate-y-[50%]">
             <Image
               alt="Clients Slide 01"

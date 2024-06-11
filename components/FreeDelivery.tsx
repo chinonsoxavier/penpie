@@ -14,7 +14,7 @@ const FreeDelivery = () => {
       <div className="max-width ">
         <div className=" flex tablet:gap-2 tablet:flex-col tablet:items-start items-center gap-5 justify-between bg-secondary rounded-tr-[50px] rounded-bl-[50px]">
           <div
-            className={`flex-1 overflow-x-clip max-w-[400px] min-w-[410px] mobile:min-w-[100%] relative before:bg-secondary before:opacity-50 before:rounded-bl-[50px] before:tablet:rounded-bl-none before:tablet:rounded-tr-[50px] before:absolute  before:inset-0 before:w-full before:h-full z-0`}
+            className={`flex-1 overflow-x-clip max-w-[400px] min-w-[320px] mobile:min-w-[100%] relative before:bg-secondary before:opacity-50 before:rounded-bl-[50px] before:tablet:rounded-bl-none before:tablet:rounded-tr-[50px] before:absolute  before:inset-0 before:w-full before:h-full z-0`}
             style={{
               background: `url(${FreeDeliveryBg.src})`,
               backgroundRepeat: "no-repeat",

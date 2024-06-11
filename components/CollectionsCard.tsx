@@ -1,4 +1,3 @@
-"use client";
 import ButtonWidget from "@/app/widgets/ButtonWidget";
 import { myStore } from "@/app/zustand/zustand";
 import Image from "next/image";
@@ -8,7 +7,6 @@ const CollectionsCard = ({
   index,
 }: any) => {
   const card = useRef<(HTMLDivElement | null)[]>([]);
-  const [hovered, setHovered] = useState(0);
   const collectionsPopup = myStore((state: any) => state.collectionsPopup);
   const handlecollectionPopup = myStore(
     (state: any) => state.handlecollectionPopup
@@ -23,18 +21,10 @@ const CollectionsCard = ({
     setSizes(data.Sizes);
   }, []);
 
-  const handleHover = (index:number) => {
-    setHovered(index);
-  };
-
   return (
     <div
       ref={(e) => (card.current[index] = e)}
-      className={`flex-1 mobile:min-w-min duration-1000 hover:shadow-2xl hover:bg-interface2 min-w-[250px] max-h-[650px] h-full border border-[#EDDFC6] rounded-lg p-5 py-8 collections_card `}
-      onMouseEnter={() => handleHover(index + 1)}
-      onMouseLeave={() => handleHover(0)}
-      onMouseOver={() => handleHover(index + 1)}
-      onMouseOut={() => handleHover(0)}
+      className={`flex-1 group mobile:min-w-min duration-1000 hover:shadow-2xl hover:bg-interface2 min-w-[250px] max-h-[650px] h-full border border-[#EDDFC6] rounded-lg p-5 py-8 collections_card `}
       key={index}
     >
       <div className="w-full center relative">
@@ -42,9 +32,7 @@ const CollectionsCard = ({
           className={` duration-1000 w-full h-full absolute flex inset-0 items-center justify-center`}
         >
           <ButtonWidget
-            className={`text-sm bg-secondary fill-white text-white transition-colors before:bg-primary font-semibold scale-0 opacity-0 ${
-              hovered === index + 1 ? "scale-[100%] opacity-100" : "scale-0"
-            }`}
+            className={`text-sm group-hover:scale-[100%] group-hover:opacity-100 duration-1000 scale-50 bg-secondary fill-white text-white transition-colors before:bg-primary font-semibold  opacity-0`}
             icon={
               <svg
                 className="w-4 h-4"
@@ -84,7 +72,7 @@ const CollectionsCard = ({
         <div className="flex-1 overflow-yclip rounded-full">
           <div className="relative w-full">
             <div
-              className={`bg-primary absolute bottom-1 w-full rounded-3xl p-3 box-border duration-700 overflow-y-clip ${
+              className={`bg-primary  absolute bottom-1 w-full rounded-3xl p-3 box-border duration-700 overflow-y-clip ${
                 collectionsPopup === `popupSelection${index}`
                   ? "scale-[100%]"
                   : "scale-0 opacity-0"

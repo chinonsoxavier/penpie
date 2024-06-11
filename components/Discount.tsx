@@ -35,7 +35,7 @@ const Discount = () => {
         </div>
         <div className="flex-1 px- relative min-w-[340px] mobile:min-w-full">
           <div className="flex items-center justify-center text-center b-[red]  max-w-[200px] mobile:max-w-[150px] -lef16 absolute top-0">
-            <p className='right-8 -mt-2 left-0 absolute text-5xl mobile:text-3xl font-bold' >
+            <p className='right-8 -mt-2 left-0 absolute text-5xl mobile:text-2xl font-bold' >
               <span className="text-secondary">40%</span>
               <br />
               Off

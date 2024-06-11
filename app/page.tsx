@@ -65,7 +65,7 @@ export default function Home() {
         <section
           className="py-20 mobile:py-10"
           style={{
-            background: `url(${AboutUsShape.src})`,
+            backgroundImage: `url(${AboutUsShape.src})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "200px",
             backgroundPositionX: "100px",

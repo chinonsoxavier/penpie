@@ -57,12 +57,19 @@ div {
 
 @keyframes freeDelivery_Smoke {
   0% {
-    transform: translateX(-10px)
+    transform: translateX(-40px)
   }
 
   100% {
-    transform: translateX(10px)
+    transform: translateX(-20px)
   }
+}
+
+
+.brands::-webkit-scrollbar {
+  /* border-radius: 10px; */
+  height: 0;
+  width: 0;
 }
 
 .freeDelivery_Smoke {

@@ -57,13 +57,15 @@ const Navbar = () => {
         <Menu />
       </section>
       <div className="max-width w-full flex items-center justify-between">
+        <Link href="/" >
         <div className="max-w-[160px] mobile:max-w-[120px] flex-1">
           <Image
             src={LogoDark}
             alt="logo"
             className="w-full h-full object-contain"
-          />
+            />
         </div>
+            </Link>
         <div className="flex items-center justify-center gap-5 flex-1 base:hidden">
           {NavbarLinks.map((link, index) => (
             <p
@@ -139,7 +141,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className="inline-flex items-center justify-center gap-2">
-            <div className="w-full h-full hidden base:inline-flex items-start justify-start gap-[1px] rounded-full relative">
+            <div className="cursor-pointer w-full h-full hidden base:inline-flex items-start justify-start gap-[1px] rounded-full relative">
               <svg
                 className="w-7 h-7 mobile:w-6 mobile:h-6 fill-black"
                 viewBox="0 0 24 24"
