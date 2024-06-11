@@ -22,7 +22,7 @@ const MainCategories = () => {
         alt="Main Categories Shape"
         className="absolute -top-[200px] -left-10 object-contain"
       />
-      <div className="px-3 w-full center gap-6 mobile:gap-0 flex-wrap">
+      <div className="px-3 w-full center gap-6 mobile:gap-3 flex-wrap">
         {MainCategoriesData.map((item, i) => (
           <div
             className="flex-1 p-1 min-w-[270px] h-[340px] relative border flex items-center justify-center mobile:h-[300px]"
